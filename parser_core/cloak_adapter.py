@@ -8,6 +8,7 @@ import threading
 import time
 from datetime import datetime
 from typing import Any
+from pathlib import Path
 
 from .models import ParserParams
 
