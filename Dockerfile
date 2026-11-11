@@ -14,6 +14,7 @@ RUN apt-get update \
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
+    && python -m playwright install-deps chromium \
     && python -m cloakbrowser install
 COPY . .
 
